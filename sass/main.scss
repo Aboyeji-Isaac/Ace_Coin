@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html{
+    font-size: 16px;
+}
+
+body{
+
+}
+
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+    gap: 40px;
+    margin: 0 auto;
+    padding-top: 6em;
+    font-family: $poppins;
+    background-color: #fff;
+    padding: 3em;
+}
+
+.form{
+    // width: 855px;
+    &-header{
+        @include setFlex (flex, center, space-between, initial);
+        margin-bottom: 5em;
+
+        .logo{
+            @include setFlex (flex, center, space-between, initial);
+            &-circle{
+                @include setFlex (flex, center, center, inherit);
+
+                height: 3em;
+                width: 3em;
+                background-color: $blue_bg;
+                border-radius: 50%;
+            }
+            h1{
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-left: .6em;
+                color: $text_one;
+                .lean{
+                    font-weight: 300;
+                }
+                .icon{
+                    
+                }
+                
+            }
+        }
+        .timer{
+            // right: 535px;
+            position: relative;
+            font-size: 1.35em;
+            font-weight: 500;
+            &-box{
+                background-color: $dark_bg;
+                color: #fff;
+                height: 1.9em;
+                width: 1.3em;
+                display: inline-flex;
+                @include setFlex (inline-flex, center, center, initial);
+                border-radius: 4px;
+                margin-left: -4px;
+            }
+            &-divider{
+                position: relative;
+                right: 2px;
+            }
+        }
+        
+    }
+
+    &-body{
+        form{
+            .input-group{
+                margin-bottom: 2em;
+                .header{
+                    @include setFlex (flex, center, space-between, initial);
+                    margin-bottom: 1.8em;
+                    .description{
+                        .title{
+                            text-transform: capitalize;
+                            font-size: 1.1em;
+                            font-weight: 700;
+                            color: $text_one;
+                            margin-bottom: .4em;
+                        }
+                        .desc{
+                            font-size: .77em;
+                            font-weight: 500;
+                            color: $text_two;
+                        }
+                    }
+                    button.edit{
+                        @include setFlex (flex, center, space-between, initial);
+                        color: $blue_bg;
+                        outline: none;
+                        border: none;
+                        background: none;
+                        color: #025efe;
+                        svg{
+                            fill: $blue_bg;
+                            height: .9em;
+                            color: #025efe;
+                        }
+                        btn-desc{
+                            display: block;
+                            margin-left: 1em;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .main{
+                    @include setFlex (flex, center, space-between, initial);
+                    position: relative;
+                    margin-top: 1em;
+                    border: 2px solid #025efe;
+                    padding: 1em 1em;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    outline-color: $active-border;
+                    img{
+                        &-loading-icon{
+                            left: 0;
+                            height: 2em;
+                            top: 50%;
+                            // width: 26px;
+                            transform: translate(0, -50%);
+                        }
+                        &-trailing-icon{
+                            right: 0;
+                            height: 1.5em;
+                            top: 50%;
+                            width: 26px;
+                            transform: translate(0, -50%);
+                        }
+                    }
+                    &-input{
+                        background-color: linear-gradient(45deg, #f8faf9, transparent);
+                        width: 100%;
+                        border: none ;
+                        outline: none;
+                        margin-left: 100px;
+                        font-weight: 600;
+                        font-size: 1.1em;
+                        outline-color: none;
+                        border-color: none;
+                    }
+
+                }
+                &.__col{
+                    @include setFlex (flex, center, space-between, initial);
+                    .header{
+                        margin-bottom: 0;
+
+                        .main{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .submit-btn{
+                @include setFlex (flex, center, space-between, initial);
+                padding: 25px 20px;
+                background-color: #025efe;
+                justify-content: center;
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+}
+
+.card{
+    @include setFlex (flex, center, center, initial);
+    margin-top: 180px;
+    border-radius: 20px;
+    display: flex;
+    // width: 404px;
+    height: 550px;
+    background-color: #f3f4f6;
+    padding: 20px;
+    bottom: 0;
+    box-sizing: border-box;
+
+    .payment-info{
+        position: absolute;
+        margin-top: 400px
+    }
+
+    span.blu{
+        margin-top: -925px;
+        border-radius: 5px;
+        width: 100px;
+        height: 15px;
+        display: flex;
+        // z-index: -1;
+        position: absolute;
+        background-color: #3b82f6;
+    }
+
+        .checkout{
+            @include setFlex (flex, center, space-between, initial);
+            position: absolute;
+            margin-top: -530px;
+            border-radius: 20px;
+            height: 393px;
+            width: 295px;
+            backdrop-filter: blur(30px);
+            border: 1px solid #e5e7eb;
+            padding: 30px;
+            box-sizing: border-box;
+            img{
+                display: flex;
+                margin-top: -250px;
+            }
+
+            $label-color: #6c7684;
+            $bold-color: #000;
+
+            .card-info {
+                padding: 10px;
+                border-radius: 10px;
+                font-family: Arial, sans-serif;
+                color: $bold-color;
+                max-width: 250px;
+
+                .card-holder {
+                    font-size: 1.1em;
+                    margin-bottom: 10px;
+                }
+
+                .card-number {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 1.2em;
+                    color: $label-color;
+                    margin-bottom: 10px;
+
+                    .dots {
+                    letter-spacing: 3px;
+                    }
+
+                    .last-four {
+                    font-weight: bold;
+                    color: $bold-color;
+                    }
+                }
+
+                .card-details {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .expiry {
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: $label-color;
+                    }
+
+                    .card-logo {
+                        img {
+                            margin-top: 50px;
+                            position: absolute;
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    .info-container {
+        margin-top: 3em;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-family: Arial, sans-serif;
+      color: $label-color;
+    
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .label {
+          font-size: 1em;
+          margin-right: 12rem;
+        }
+    
+        .value {
+          display: flex;
+          align-items: center;
+          font-size: 1em;
+    
+          .company-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+          }
+    
+          &.bold {
+            font-weight: bold;
+            color: #000;
+          }
+        }
+      }
+    }
+    
+    .dotted-line {
+        position: absolute;
+        width: 400px;
+      border: none;
+      border-top: 1px dashed $label-color; // You can change the color and thickness as needed
+      margin-top: 300px;
+    }
+
+      .by-side{
+        @include setFlex (flex, center, space-between, initial);
+        .aside{
+            display: flex;
+            position: absolute;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            margin-top: 300px;
+          }
+
+          .left{
+            margin-left: -400px;
+          }
+      }
+    
+}
