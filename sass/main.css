@@ -89,7 +89,7 @@ html {
 .form-body form .input-group .header .description .desc {
   font-size: 0.77em;
   font-weight: 500;
-  color: #8e96a3;
+  color: #6b7280;
 }
 .form-body form .input-group .header button.edit {
   display: flex;
@@ -183,16 +183,12 @@ html {
   flex-direction: initial;
   margin-top: 180px;
   border-radius: 20px;
-  display: flex;
-  height: 550px;
+  flex-direction: column;
+  height: 600px;
   background-color: #f3f4f6;
   padding: 20px;
   bottom: 0;
   box-sizing: border-box;
-}
-.card .payment-info {
-  position: absolute;
-  margin-top: 400px;
 }
 .card span.blu {
   margin-top: -925px;
@@ -220,8 +216,12 @@ html {
   box-sizing: border-box;
 }
 .card .checkout img {
+  position: absolute;
   display: flex;
   margin-top: -250px;
+}
+.card .checkout .wifi-icon {
+  margin-left: 190px;
 }
 .card .checkout .card-info {
   padding: 10px;
@@ -231,15 +231,16 @@ html {
   max-width: 250px;
 }
 .card .checkout .card-info .card-holder {
-  font-size: 1.1em;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-top: 200px;
 }
 .card .checkout .card-info .card-number {
   display: flex;
   align-items: center;
   gap: 5px;
   font-size: 1.2em;
-  color: #6c7684;
+  color: #374151;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .card .checkout .card-info .card-number .dots {
@@ -247,7 +248,7 @@ html {
 }
 .card .checkout .card-info .card-number .last-four {
   font-weight: bold;
-  color: #000;
+  color: #374151;
 }
 .card .checkout .card-info .card-details {
   display: flex;
@@ -257,21 +258,22 @@ html {
 .card .checkout .card-info .card-details .expiry {
   font-size: 1em;
   font-weight: bold;
-  color: #6c7684;
+  color: #374151;
 }
 .card .checkout .card-info .card-details .card-logo img {
-  margin-top: 50px;
-  position: absolute;
-  width: 50px;
-  height: 50px;
+  margin-top: 5px;
+  margin-right: -30px;
+  position: relative;
+  width: 60px;
+  height: 60px;
 }
 .card .info-container {
-  margin-top: 3em;
+  margin-top: 20em;
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: Arial, sans-serif;
-  color: #6c7684;
+  color: #6b7280;
 }
 .card .info-container .info-row {
   display: flex;
@@ -279,8 +281,9 @@ html {
   align-items: center;
 }
 .card .info-container .info-row .label {
+  display: flex;
   font-size: 1em;
-  margin-right: 12rem;
+  margin-right: 10rem;
 }
 .card .info-container .info-row .value {
   display: flex;
@@ -300,8 +303,8 @@ html {
   position: absolute;
   width: 400px;
   border: none;
-  border-top: 1px dashed #6c7684;
-  margin-top: 300px;
+  border-top: 1px dashed #cccccc;
+  margin-top: 320px;
 }
 .card .by-side {
   display: flex;
@@ -310,14 +313,10 @@ html {
   flex-direction: initial;
 }
 .card .by-side .aside {
-  display: flex;
-  position: absolute;
+  margin: 0 -210px;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   background-color: #fff;
-  margin-top: 300px;
-}
-.card .by-side .left {
-  margin-left: -400px;
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */

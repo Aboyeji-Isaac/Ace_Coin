@@ -186,18 +186,12 @@ body{
     @include setFlex (flex, center, center, initial);
     margin-top: 180px;
     border-radius: 20px;
-    display: flex;
-    // width: 404px;
-    height: 550px;
+    flex-direction: column;
+    height: 600px;
     background-color: #f3f4f6;
     padding: 20px;
     bottom: 0;
     box-sizing: border-box;
-
-    .payment-info{
-        position: absolute;
-        margin-top: 400px
-    }
 
     span.blu{
         margin-top: -925px;
@@ -222,12 +216,18 @@ body{
             padding: 30px;
             box-sizing: border-box;
             img{
+                position: absolute;
                 display: flex;
                 margin-top: -250px;
             }
 
-            $label-color: #6c7684;
-            $bold-color: #000;
+            
+            .wifi-icon{
+                margin-left: 190px;
+            }
+
+            
+
 
             .card-info {
                 padding: 10px;
@@ -237,8 +237,8 @@ body{
                 max-width: 250px;
 
                 .card-holder {
-                    font-size: 1.1em;
-                    margin-bottom: 10px;
+                    font-size: 1.5em;
+                    margin-top: 200px;
                 }
 
                 .card-number {
@@ -246,7 +246,8 @@ body{
                     align-items: center;
                     gap: 5px;
                     font-size: 1.2em;
-                    color: $label-color;
+                    color: #374151;
+                    margin-top: 10px;
                     margin-bottom: 10px;
 
                     .dots {
@@ -255,7 +256,7 @@ body{
 
                     .last-four {
                     font-weight: bold;
-                    color: $bold-color;
+                    color: #374151;
                     }
                 }
 
@@ -267,15 +268,16 @@ body{
                     .expiry {
                         font-size: 1em;
                         font-weight: bold;
-                        color: $label-color;
+                        color: #374151;
                     }
 
                     .card-logo {
                         img {
-                            margin-top: 50px;
-                            position: absolute;
-                            width: 50px;
-                            height: 50px;
+                            margin-top: 5px;
+                            margin-right: -30px;
+                            position: relative;
+                            width: 60px;
+                            height: 60px;
                         }
                     }
                 }
@@ -284,12 +286,12 @@ body{
         }
 
     .info-container {
-        margin-top: 3em;
+        margin-top: 20em;
       display: flex;
       flex-direction: column;
       gap: 20px;
       font-family: Arial, sans-serif;
-      color: $label-color;
+      color: $text_two;
     
       .info-row {
         display: flex;
@@ -297,8 +299,9 @@ body{
         align-items: center;
     
         .label {
+            display: flex;
           font-size: 1em;
-          margin-right: 12rem;
+          margin-right: 10rem;
         }
     
         .value {
@@ -321,28 +324,26 @@ body{
     }
     
     .dotted-line {
-        position: absolute;
-        width: 400px;
+      position: absolute;
+      width: 400px;
       border: none;
-      border-top: 1px dashed $label-color; // You can change the color and thickness as needed
-      margin-top: 300px;
+      border-top: 1px dashed $label-color;
+      margin-top: 320px;
     }
 
       .by-side{
         @include setFlex (flex, center, space-between, initial);
+        
         .aside{
-            display: flex;
-            position: absolute;
+            margin: 0 -210px;
+
             border-radius: 50%;
             width: 60px;
             height: 60px;
             background-color: #fff;
-            margin-top: 300px;
+            z-index: 2;
           }
-
-          .left{
-            margin-left: -400px;
-          }
+          
       }
     
 }
