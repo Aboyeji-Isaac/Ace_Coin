@@ -7,20 +7,37 @@ html{
     font-size: 16px;
 }
 
-body{
-    
-}
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url('/assets/bg.jpg');
+    background-size: cover; /* Adjusts the image to cover the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
 
 .wrapper{
     display: flex;
-    max-width: 1200px;
+    max-width: 1050px;
+    height: 110vh;
     position: relative;
     gap: 40px;
-    margin: 0 auto;
+    margin: 5em auto;
     padding-top: 6em;
     font-family: $poppins;
     background-color: #fff;
     padding: 3em;
+
+    .close-btn {
+        position: absolute;
+        top: 10px; 
+        right: 50px; 
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+    }
+    
 }
 
 .form{
@@ -31,6 +48,7 @@ body{
 
         .logo{
             @include setFlex (flex, center, space-between, initial);
+            cursor: pointer;
             &-circle{
                 @include setFlex (flex, center, center, inherit);
 
@@ -54,10 +72,10 @@ body{
             }
         }
         .timer{
-            // right: 535px;
             position: relative;
             font-size: 1.35em;
             font-weight: 500;
+            cursor: pointer;
             &-box{
                 background-color: $dark_bg;
                 color: #fff;
@@ -128,6 +146,7 @@ body{
                     font-weight: 600;
                     outline-color: $active-border;
                     img{
+                        cursor: pointer;
                         &-loading-icon{
                             left: 0;
                             height: 2em;

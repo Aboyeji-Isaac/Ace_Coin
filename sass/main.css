@@ -3,16 +3,34 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url("/assets/bg.jpg");
+  background-size: cover; /* Adjusts the image to cover the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
 .wrapper {
   display: flex;
-  max-width: 1200px;
+  max-width: 1050px;
+  height: 110vh;
   position: relative;
   gap: 40px;
-  margin: 0 auto;
+  margin: 5em auto;
   padding-top: 6em;
   font-family: "Poppins", sans-serif;
   background-color: #fff;
   padding: 3em;
+}
+.wrapper .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
 }
 
 .form-header {
@@ -27,6 +45,7 @@ html {
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
+  cursor: pointer;
 }
 .form-header .logo-circle {
   display: flex;
@@ -51,6 +70,7 @@ html {
   position: relative;
   font-size: 1.35em;
   font-weight: 500;
+  cursor: pointer;
 }
 .form-header .timer-box {
   background-color: #17254c;
@@ -126,6 +146,9 @@ html {
   border-radius: 10px;
   font-weight: 600;
   outline-color: #0077B6;
+}
+.form-body form .input-group .main img {
+  cursor: pointer;
 }
 .form-body form .input-group .main img-loading-icon {
   left: 0;
