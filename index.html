@@ -20,11 +20,14 @@
                     <h1>AceCoin<span class="lean">Pay</span></h1>
                 </div>
                 <div class="timer">
-                    <span class="timer-box">0</span>
-                    <span class="timer-box">1</span>
-                    <span class="timer-divider">:</span>
-                    <span class="timer-box">1</span>
-                    <span class="timer-box">9</span>
+                    <span class="timer-box" id="hour-tens">0</span>
+                    <span class="timer-box" id="hour-ones">1</span>
+                    <span class="timer-divider blink">:</span>
+                    <span class="timer-box" id="minute-tens">1</span>
+                    <span class="timer-box" id="minute-ones">9</span>
+                    <!-- <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring__circle" stroke="black" stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/>
+                    </svg>                     -->
                 </div>
             </header>
             <section class="form-body">
@@ -101,7 +104,10 @@
                         </div>
                     </div>
                     <div class="submit-btn">
-                        <a href="#">Pay Now</a>
+                        <a href="#" id="pay-btn">
+                            <span id="btn-text">Pay Now</span>
+                            <div class="loader" id="btn-loader"></div>
+                        </a>
                     </div>
                 </form>
             </section>
@@ -165,6 +171,6 @@
         </div>
     </div>
 
-
+<script src="index.js"></script>
 </body>
 </html>

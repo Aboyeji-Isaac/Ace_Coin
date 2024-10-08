@@ -89,6 +89,12 @@ body {
   position: relative;
   right: 2px;
 }
+.form-header .timer .blink {
+  visibility: hidden; /* Hides the element */
+}
+.form-body form {
+  /* Loader (initially hidden) */
+}
 .form-body form .input-group {
   margin-bottom: 2em;
 }
@@ -192,14 +198,47 @@ body {
   justify-content: space-between;
   flex-direction: initial;
   padding: 25px 20px;
+  color: #fff;
   background-color: #025efe;
   justify-content: center;
   border-radius: 10px;
+  text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .form-body form .submit-btn a {
   text-decoration: none;
   color: #fff;
+}
+.form-body form .submit-btn a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-body form #btn-text {
+  margin-right: 10px;
+}
+.form-body form .loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form-body form .loader.active {
+  display: inline-block;
 }
 
 .card {

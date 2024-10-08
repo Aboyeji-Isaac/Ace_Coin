@@ -90,6 +90,14 @@ body {
                 position: relative;
                 right: 2px;
             }
+            // .progress-ring__circle {
+            //     transition: stroke-dashoffset 0.35s;
+            //     transform: rotate(-90deg);
+            //     transform-origin: 50% 50%;
+            // }  
+            .blink {
+                visibility: hidden; /* Hides the element */
+            }                      
         }
         
     }
@@ -189,15 +197,61 @@ body {
             .submit-btn{
                 @include setFlex (flex, center, space-between, initial);
                 padding: 25px 20px;
+                color: #fff;
                 background-color: #025efe;
                 justify-content: center;
                 border-radius: 10px;
+                text-align: center;
                 cursor: pointer;
+                transition: background-color 0.3s ease;
                 a{
                     text-decoration: none;
                     color: #fff;
                 }
             }
+            // .submit-btn {
+            //     @include setFlex (flex, center, space-between, initial);
+            //    display: inline-block;
+            //     padding: 25px 20px;
+            //     background-color: #007bff;
+            //     color: white;
+            //     text-align: center;
+            //     border-radius: 5px;
+            //     cursor: pointer;
+            // }
+            
+            .submit-btn a {
+                text-decoration: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            #btn-text {
+                margin-right: 10px;
+            }
+            
+            /* Loader (initially hidden) */
+            .loader {
+                border: 3px solid #f3f3f3;
+                border-top: 3px solid #3498db;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                animation: spin 1s linear infinite;
+                display: none;
+            }
+            
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            .loader.active {
+                display: inline-block;
+            }
+            
         }
     }
 
@@ -407,4 +461,13 @@ body {
         }
     }
     
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width:425px){
+
 }
