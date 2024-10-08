@@ -101,11 +101,13 @@ html {
   border: none;
   background: none;
   color: #025efe;
+  cursor: pointer;
 }
 .form-body form .input-group .header button.edit svg {
   fill: #035fff;
   height: 0.9em;
   color: #025efe;
+  margin-right: 1em;
 }
 .form-body form .input-group .header button.edit btn-desc {
   display: block;
@@ -170,6 +172,7 @@ html {
   background-color: #025efe;
   justify-content: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 .form-body form .submit-btn a {
   text-decoration: none;
@@ -304,7 +307,7 @@ html {
   width: 400px;
   border: none;
   border-top: 1px dashed #cccccc;
-  margin-top: 320px;
+  margin-top: 400px;
 }
 .card .by-side {
   display: flex;
@@ -315,8 +318,41 @@ html {
 .card .by-side .aside {
   margin: 0 -210px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
   z-index: 2;
+}
+.card .payment-info {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+}
+.card .payment-info .price {
+  margin-top: -20px;
+  margin-right: 110px;
+  color: #6b7280;
+}
+.card .payment-info .price .amount {
+  margin-top: -15px;
+}
+.card .payment-info .price .amount .bold {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.card .payment-info .price .amount .sub {
+  color: #000;
+  font-weight: 700;
+  font-size: 1em;
+}
+.card .payment-info .teller {
+  display: flex;
+  position: relative;
+  margin-left: 50px;
+}
+.card .payment-info .teller img {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=main.css.map */

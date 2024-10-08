@@ -8,7 +8,7 @@ html{
 }
 
 body{
-
+    
 }
 
 .wrapper{
@@ -104,10 +104,12 @@ body{
                         border: none;
                         background: none;
                         color: #025efe;
+                        cursor: pointer;
                         svg{
                             fill: $blue_bg;
                             height: .9em;
                             color: #025efe;
+                            margin-right: 1em;
                         }
                         btn-desc{
                             display: block;
@@ -171,6 +173,7 @@ body{
                 background-color: #025efe;
                 justify-content: center;
                 border-radius: 10px;
+                cursor: pointer;
                 a{
                     text-decoration: none;
                     color: #fff;
@@ -286,7 +289,7 @@ body{
         }
 
     .info-container {
-        margin-top: 20em;
+      margin-top: 20em;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -328,7 +331,7 @@ body{
       width: 400px;
       border: none;
       border-top: 1px dashed $label-color;
-      margin-top: 320px;
+      margin-top: 400px;
     }
 
       .by-side{
@@ -338,12 +341,51 @@ body{
             margin: 0 -210px;
 
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background-color: #fff;
             z-index: 2;
           }
           
       }
+
+    .payment-info{
+        width: max-content;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        .price{
+            margin-top: -20px;
+            margin-right: 110px;
+            // margin-left: -90px;
+            color: $text_two;
+            .amount{
+                margin-top: -15px;
+                .bold{
+                    color: #000;
+                    font-size: 1.5em;
+                    font-weight: 700;
+    
+                }
+                .sub{
+                    color: #000;
+                    font-weight: 700;
+                    font-size: 1em;
+                }
+            }
+    
+        }
+
+        .teller{
+            display: flex;
+            position: relative;
+            margin-left: 50px;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
     
 }
