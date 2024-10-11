@@ -174,11 +174,14 @@ body {
   width: 100%;
   border: none;
   outline: none;
-  margin-left: 100px;
+  margin-left: 50px;
   font-weight: 600;
   font-size: 1.1em;
   outline-color: none;
   border-color: none;
+}
+.form-body form .input-group .box-body {
+  margin-left: 50px;
 }
 .form-body form .input-group.__col {
   display: flex;
@@ -191,6 +194,9 @@ body {
 }
 .form-body form .input-group.__col .header .main {
   margin-top: 0;
+}
+.form-body form .input-group.__col .input-box {
+  width: 300px;
 }
 .form-body form .submit-btn {
   display: flex;
@@ -369,7 +375,7 @@ body {
   width: 400px;
   border: none;
   border-top: 1px dashed #cccccc;
-  margin-top: 400px;
+  margin-top: 420px;
 }
 .card .by-side {
   display: flex;
@@ -417,4 +423,37 @@ body {
 .card .payment-info .teller img {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 912px) {
+  body {
+    margin: 0;
+    height: 100%;
+    background-image: url("/assets/bg.jpg");
+    background-size: cover; /* Adjusts the image to cover the entire element */
+    background-position: right; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  .wrapper {
+    height: 70vh;
+  }
+  .card {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    height: 80vh;
+  }
+}
+@media (max-width: 430px) {
+  .wrapper {
+    max-width: 430px;
+  }
+  .input-group-input {
+    width: 400px;
+  }
+  .card {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,42 +1,4 @@
-// const circle = document.querySelector('.progress-ring__circle');
-// const radius = circle.r.baseVal.value;
-// const circumference = 2 * Math.PI * radius;
-
-// circle.style.strokeDasharray = `${circumference} ${circumference}`;
-// circle.style.strokeDashoffset = circumference;
-
-// function setProgress(percent) {
-//     const offset = circumference - (percent / 100) * circumference;
-//     circle.style.strokeDashoffset = offset;
-// }
-
-// // Set progress to 50% (as an example)
-// setProgress(50);
-
-// function updateTimer() {
-//     const now = new Date();
-    
-//     let hours = now.getHours();
-//     let minutes = now.getMinutes();
-
-//     // Convert hours and minutes into individual digits
-//     const hourTens = Math.floor(hours / 10);
-//     const hourOnes = hours % 10;
-//     const minuteTens = Math.floor(minutes / 10);
-//     const minuteOnes = minutes % 10;
-
-//     // Update the spans with the new time
-//     document.getElementById('hour-tens').innerText = hourTens;
-//     document.getElementById('hour-ones').innerText = hourOnes;
-//     document.getElementById('minute-tens').innerText = minuteTens;
-//     document.getElementById('minute-ones').innerText = minuteOnes;
-// }
-
-// // Update the timer immediately and every second
-// updateTimer();
-// setInterval(updateTimer, 1000);
-
-
+//Time Interaction
 function updateTimer() {
     const now = new Date();
     
@@ -65,6 +27,7 @@ updateTimer();
 setInterval(updateTimer, 1000);
 
 
+//Submit Button Animation
 document.getElementById('pay-btn').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default action if needed
     
@@ -72,8 +35,8 @@ document.getElementById('pay-btn').addEventListener('click', function(event) {
     const loader = document.getElementById('btn-loader');
 
     // Show the loader and hide the text
-    btnText.innerText = 'Processing...';
     loader.classList.add('active');
+    btnText.innerText = 'Processing';
 
     // Simulate a delay of 3 seconds (e.g., simulating payment processing)
     setTimeout(function() {
