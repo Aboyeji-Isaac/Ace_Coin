@@ -12,14 +12,14 @@ body {
     height: 100%;
     background-image: url('/assets/bg.jpg');
     background-size: cover; /* Adjusts the image to cover the entire element */
-    background-position: center; /* Centers the image */
+    background-position: left; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
   }
   
 
 .wrapper{
     display: flex;
-    max-width: 1050px;
+    max-width: 1100px;
     height: 110vh;
     position: relative;
     gap: 40px;
@@ -172,7 +172,6 @@ body {
                     }
                     &-input{
                         background-color: linear-gradient(45deg, #f8faf9, transparent);
-                        width: 100%;
                         border: none ;
                         outline: none;
                         margin-left: 50px;
@@ -219,6 +218,7 @@ body {
             }
             
             .submit-btn a {
+                width: fit-content;
                 text-decoration: none;
                 color: white;
                 display: flex;
@@ -273,7 +273,6 @@ body {
         width: 100px;
         height: 15px;
         display: flex;
-        // z-index: -1;
         position: absolute;
         background-color: #3b82f6;
     }
@@ -402,7 +401,7 @@ body {
       width: 400px;
       border: none;
       border-top: 1px dashed $label-color;
-      margin-top: 420px;
+      margin-top: 405px;
     }
 
       .by-side{
@@ -487,16 +486,164 @@ body {
     }
 }
 
-@media (max-width:430px){
-    .wrapper{
-        max-width: 430px;
+// @media (max-width:430px){
+//     .wrapper{
+//         max-width: 400px;
+//     }
+
+//     .input-group{
+//         .moble-digit{
+//             width: 350px;
+//         }
+//     }
+
+//     .block{
+//         @include setFlex (block, center, space-between, initial);
+//     }
+
+//     .input-box{
+//         width: 350px;
+//     }
+
+//     .box-body{
+//         display: block;
+//     }
+
+//     .card{
+//         display: none;
+//     }
+// }
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .form-header {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      flex-direction: row;
+      h1 {
+        font-size: 1.2rem;
+      }
     }
-    .input-group{
-        &-input{
-            width: 400px;
+
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-divider{
+        position: absolute;
+        margin-right: 80px;
+      }
+    }
+
+    .timer-box {
+      margin-right: 12px;
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .description {
+        h2 {
+          font-size: 1rem;
         }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .edit {
+        font-size: 0.9rem;
+      }
     }
-    .card{
-        display: none;
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #025efe;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+
+      input {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        border: none;
+      }
+
+      .loading-icon, .trailing-icon {
+        width: 40px;
+      }
     }
+  }
+
+//   .card {
+//     width: 100%;
+//     padding: 15px;
+
+//     .checkout {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: flex-start;
+      
+//       .card-info {
+//         display: flex;
+//         flex-direction: column;
+//       }
+//     }
+
+//     .payment-info {
+//       text-align: center;
+
+//       .price {
+//         font-size: 1.3rem;
+//       }
+
+//       .amount {
+//         font-size: 2rem;
+//       }
+//     }
+//   }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+
+    #pay-btn {
+      width: 100%;
+      padding: 15px 0;
+      background-color: #025efe;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+  }
 }
