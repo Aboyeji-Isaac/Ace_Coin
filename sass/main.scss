@@ -472,7 +472,6 @@ body {
       }
       
     .wrapper{
-        // width: 700px;
         height: 70vh;
     }
     .card{
@@ -486,33 +485,6 @@ body {
     }
 }
 
-// @media (max-width:430px){
-//     .wrapper{
-//         max-width: 400px;
-//     }
-
-//     .input-group{
-//         .moble-digit{
-//             width: 350px;
-//         }
-//     }
-
-//     .block{
-//         @include setFlex (block, center, space-between, initial);
-//     }
-
-//     .input-box{
-//         width: 350px;
-//     }
-
-//     .box-body{
-//         display: block;
-//     }
-
-//     .card{
-//         display: none;
-//     }
-// }
 
 @media (max-width: 480px) {
   body {
@@ -521,6 +493,10 @@ body {
 
   .wrapper {
     padding: 10px;
+    .close-btn{
+        right: 0;
+        margin-right: 10px;
+    }
   }
 
   .form {
@@ -529,7 +505,7 @@ body {
   }
 
   .form-header {
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 2em;
     flex-direction: row;
     justify-content: space-between;
@@ -555,7 +531,7 @@ body {
     .timer-box {
       margin-right: 12px;
       width: 30px;
-      height: 30px;
+      height: 35px;
       font-size: 1.2rem;
     }
   }
@@ -565,6 +541,7 @@ body {
 
     .header {
       display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: center;
 
@@ -576,12 +553,13 @@ body {
           font-size: 0.9rem;
         }
       }
-
+    
       .edit {
         font-size: 0.9rem;
+        font-weight: 500;
       }
     }
-
+    
     .main {
       display: flex;
       justify-content: space-between;
@@ -590,47 +568,21 @@ body {
       border-radius: 10px;
       padding: 10px;
       margin-top: 10px;
-
+      
+      // Removed the position absolute
+      // position: absolute;
+    
       input {
-        width: 100%;
+        flex: 1;
         font-size: 1rem;
         padding: 10px;
         border: none;
       }
-
       .loading-icon, .trailing-icon {
         width: 40px;
       }
     }
   }
-
-//   .card {
-//     width: 100%;
-//     padding: 15px;
-
-//     .checkout {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: flex-start;
-      
-//       .card-info {
-//         display: flex;
-//         flex-direction: column;
-//       }
-//     }
-
-//     .payment-info {
-//       text-align: center;
-
-//       .price {
-//         font-size: 1.3rem;
-//       }
-
-//       .amount {
-//         font-size: 2rem;
-//       }
-//     }
-//   }
 
   .submit-btn {
     width: 100%;
@@ -646,4 +598,63 @@ body {
       border-radius: 10px;
     }
   }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Ensure full width for mobile
+  
+    .header {
+      &.block {
+        width: 100%;
+        display: block; // Ensure the header takes full width
+        margin-bottom: 10px; // Add some spacing below the header if needed
+      }
+    }
+  
+    .main {
+      display: block;
+      align-items: center;
+      border: 1px solid #025efe;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%; // Full width
+  
+      input {
+        flex: 1;
+        font-size: 1rem;
+        padding: 10px;
+        border: none;
+      }
+  
+      .trailing-icon {
+        width: 26px;
+        margin-left: 10px; // Add spacing between input and icon
+      }
+    }
+  
+    span {
+      margin: 0 5px; // Adjust spacing for separators like "/"
+    }
+  
+    .submit-btn {
+      width: 100%;
+      margin-top: 20px;
+  
+      #pay-btn {
+        width: 100%;
+        padding: 15px 0;
+        background-color: #025efe;
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 10px;
+      }
+    }
+  }
+  
 }
+
+
+  

@@ -454,12 +454,16 @@ body {
   .wrapper {
     padding: 10px;
   }
+  .wrapper .close-btn {
+    right: 0;
+    margin-right: 10px;
+  }
   .form {
     width: 100%;
     margin-bottom: 15px;
   }
   .form-header {
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 2em;
     flex-direction: row;
     justify-content: space-between;
@@ -483,7 +487,7 @@ body {
   .form-header .timer-box {
     margin-right: 12px;
     width: 30px;
-    height: 30px;
+    height: 35px;
     font-size: 1.2rem;
   }
   .input-group {
@@ -491,6 +495,7 @@ body {
   }
   .input-group .header {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
   }
@@ -502,6 +507,7 @@ body {
   }
   .input-group .header .edit {
     font-size: 0.9rem;
+    font-weight: 500;
   }
   .input-group .main {
     display: flex;
@@ -513,7 +519,7 @@ body {
     margin-top: 10px;
   }
   .input-group .main input {
-    width: 100%;
+    flex: 1;
     font-size: 1rem;
     padding: 10px;
     border: none;
@@ -526,6 +532,51 @@ body {
     margin-top: 20px;
   }
   .submit-btn #pay-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #025efe;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .input-group .header.block {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .input-group .main {
+    display: block;
+    align-items: center;
+    border: 1px solid #025efe;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .input-group .main input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+  }
+  .input-group .main .trailing-icon {
+    width: 26px;
+    margin-left: 10px;
+  }
+  .input-group span {
+    margin: 0 5px;
+  }
+  .input-group .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .input-group .submit-btn #pay-btn {
     width: 100%;
     padding: 15px 0;
     background-color: #025efe;

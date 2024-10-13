@@ -44,6 +44,14 @@ document.getElementById('pay-btn').addEventListener('click', function(event) {
         loader.classList.remove('active');
         btnText.innerText = 'Successful';
         
+        // Change the background color of the .submit-btn to green
+        const submitBtn = document.querySelector('.submit-btn');
+        submitBtn.style.backgroundColor = '#28a745'; // Green color for success
+
+        // Optionally, change the background color of the button itself if needed
+        const payBtn = document.getElementById('pay-btn');
+        payBtn.style.backgroundColor = '#28a745'; // Green color for success
+
         // You can also change the color to indicate success
         document.querySelector('.submit-btn').style.backgroundColor = '#28a745'; // Green color for success
     }, 3000); // 3 seconds delay
