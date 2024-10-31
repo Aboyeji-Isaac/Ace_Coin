@@ -145,48 +145,57 @@ body {
                     }
                 }
                 .main{
-                    @include setFlex (flex, center, space-between, initial);
-                    position: relative;
-                    margin-top: 1em;
-                    border: 2px solid #025efe;
-                    padding: 1em 1em;
-                    border-radius: 10px;
+                  @include setFlex (flex, center, space-between, initial);
+                  position: relative;
+                  margin-top: 1em;
+                  border: 2px solid #025efe;
+                  padding: 1em 1em;
+                  border-radius: 10px;
+                  font-weight: 600;
+                  outline-color: $active-border;
+                  img{
+                      cursor: pointer;
+                      &-loading-icon{
+                          left: 0;
+                          height: 2em;
+                          top: 50%;
+                          // width: 26px;
+                          transform: translate(0, -50%);
+                      }
+                      &-trailing-icon{
+                          right: 0;
+                          height: 1.5em;
+                          top: 50%;
+                          width: 26px;
+                          transform: translate(0, -50%);
+                      }
+                  }
+                  &-input{
+                    background-color: linear-gradient(45deg, #f8faf9, transparent);
+                    border: none ;
+                    outline: none;
+                    margin-left: 50px;
                     font-weight: 600;
-                    outline-color: $active-border;
-                    img{
-                        cursor: pointer;
-                        &-loading-icon{
-                            left: 0;
-                            height: 2em;
-                            top: 50%;
-                            // width: 26px;
-                            transform: translate(0, -50%);
-                        }
-                        &-trailing-icon{
-                            right: 0;
-                            height: 1.5em;
-                            top: 50%;
-                            width: 26px;
-                            transform: translate(0, -50%);
-                        }
-                    }
-                    &-input{
-                        background-color: linear-gradient(45deg, #f8faf9, transparent);
-                        border: none ;
-                        outline: none;
-                        margin-left: 50px;
-                        font-weight: 600;
-                        font-size: 1.1em;
-                        outline-color: none;
-                        border-color: none;
-                    }
+                    font-size: 1.1em;
+                    outline-color: none;
+                    border-color: none;
+                  }
+                  
+                  &:hover{
+                    border: 3px solid $blue_bg;
+                  }
+                  &:focus{
+                    outline: none;
+                    border-color: #53657a;
+                    box-shadow: 0 0 5px #53657a80; 
+                  }
 
                 }
                 .box-body{
-                    margin-left: 50px
+                  margin-left: 50px
                 }
                 &.__col{
-                    @include setFlex (flex, center, space-between, initial);
+                    @include setFlex (flex, center, space-between, row);
                     .header{
                         margin-bottom: 0;
 
@@ -492,6 +501,7 @@ body {
   }
 
   .wrapper {
+    width: 100%;
     padding: 10px;
     .close-btn{
         right: 0;
@@ -657,4 +667,303 @@ body {
 }
 
 
+// @media (max-width: 320px) {
+//   body {
+//     padding: 0 10px;
+//   }
+
+//   .wrapper {
+//     padding: 10px;
+//     .close-btn{
+//         right: 0;
+//         margin-right: 10px;
+//     }
+//   }
+
+//   .form {
+//     width: 100%;
+//     margin-bottom: 15px;
+//   }
+
+//   .form-header {
+//     // margin-top: 3em;
+//     // margin-bottom: 2em;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     .logo {
+//       flex-direction: row;
+//       h1 {
+//         font-size: 1.2rem;
+//       }
+//     }
+
+//     .timer {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       &-divider{
+//         position: absolute;
+//         margin-right: 80px;
+//       }
+//     }
+
+//     .timer-box {
+//       margin-right: 12px;
+//       width: 30px;
+//       height: 35px;
+//       font-size: 1.2rem;
+//     }
+//   }
+
+//   .input-group {
+//     margin-bottom: 20px;
+
+//     .header {
+//       display: flex;
+//       position: relative;
+//       justify-content: space-between;
+//       align-items: center;
+
+//       .description {
+//         h2 {
+//           font-size: 1rem;
+//         }
+//         p {
+//           font-size: 0.9rem;
+//         }
+//       }
+    
+//       .edit {
+//         font-size: 0.9rem;
+//         font-weight: 500;
+//       }
+//     }
+    
+//     .main {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       border: 1px solid #025efe;
+//       border-radius: 10px;
+//       padding: 10px;
+//       margin-top: 10px;
+      
+//       // Removed the position absolute
+//       // position: absolute;
+    
+//       input {
+//         flex: 1;
+//         font-size: 1rem;
+//         padding: 10px;
+//         border: none;
+//       }
+//       .loading-icon, .trailing-icon {
+//         width: 40px;
+//       }
+//     }
+//   }
+
+//   .submit-btn {
+//     width: 100%;
+//     margin-top: 20px;
+
+//     #pay-btn {
+//       width: 100%;
+//       padding: 15px 0;
+//       background-color: #025efe;
+//       color: white;
+//       text-align: center;
+//       font-size: 1rem;
+//       border-radius: 10px;
+//     }
+//   }
+
+//   .input-group {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%; // Ensure full width for mobile
   
+//     .header {
+//       &.block {
+//         width: 100%;
+//         display: block; // Ensure the header takes full width
+//         margin-bottom: 10px; // Add some spacing below the header if needed
+//       }
+//     }
+  
+//     .main {
+//       display: block;
+//       align-items: center;
+//       border: 1px solid #025efe;
+//       border-radius: 10px;
+//       padding: 10px;
+//       margin-top: 10px;
+//       width: 100%; // Full width
+  
+//       input {
+//         flex: 1;
+//         font-size: 1rem;
+//         padding: 10px;
+//         border: none;
+//       }
+  
+//       .trailing-icon {
+//         width: 26px;
+//         margin-left: 10px; // Add spacing between input and icon
+//       }
+//     }
+  
+//     span {
+//       margin: 0 5px; // Adjust spacing for separators like "/"
+//     }
+  
+//     .submit-btn {
+//       width: 100%;
+//       margin-top: 20px;
+  
+//       #pay-btn {
+//         width: 100%;
+//         padding: 15px 0;
+//         background-color: #025efe;
+//         color: white;
+//         text-align: center;
+//         font-size: 1rem;
+//         border-radius: 10px;
+//       }
+//     }
+//   }
+  
+// }
+
+
+@media (max-width: 320px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .wrapper {
+    padding: 10px;
+
+    .close-btn {
+      right: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 15px;
+    .mbl_xs{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .form-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      flex-direction: row;
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-divider {
+        position: absolute;
+        margin-right: 80px;
+      }
+    }
+
+    .timer-box {
+      margin-right: 12px;
+      width: 30px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Ensure full width for mobile
+
+    margin-bottom: 20px;
+
+    .header {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+
+      .description {
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .edit {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+
+    .main {
+      display: block; // Set display to block for mobile
+      align-items: center;
+      border: 1px solid #025efe;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%; // Full width
+
+      input {
+        flex: 1;
+        font-size: 1rem;
+        padding: 10px;
+        border: none;
+      }
+
+      .loading-icon,
+      .trailing-icon {
+        width: 40px; // You might want to reconsider sizes for mobile
+      }
+
+      .trailing-icon {
+        width: 26px;
+        margin-left: 10px; // Add spacing between input and icon
+      }
+    }
+
+    span {
+      margin: 0 5px; // Adjust spacing for separators like "/"
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+
+    #pay-btn {
+      width: 100%;
+      padding: 15px 0;
+      background-color: #025efe;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+  }
+}

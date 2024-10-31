@@ -179,6 +179,14 @@ body {
   outline-color: none;
   border-color: none;
 }
+.form-body form .input-group .main:hover {
+  border: 3px solid #035fff;
+}
+.form-body form .input-group .main:focus {
+  outline: none;
+  border-color: #53657a;
+  box-shadow: 0 0 5px rgba(83, 101, 122, 0.5019607843);
+}
 .form-body form .input-group .box-body {
   margin-left: 50px;
 }
@@ -186,7 +194,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: initial;
+  flex-direction: row;
 }
 .form-body form .input-group.__col .header {
   margin-bottom: 0;
@@ -452,6 +460,7 @@ body {
     padding: 0 10px;
   }
   .wrapper {
+    width: 100%;
     padding: 10px;
   }
   .wrapper .close-btn {
@@ -577,6 +586,113 @@ body {
     margin-top: 20px;
   }
   .input-group .submit-btn #pay-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #025efe;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    padding: 0 10px;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .wrapper .close-btn {
+    right: 0;
+    margin-right: 10px;
+  }
+  .form {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .form .mbl_xs {
+    display: flex;
+    flex-direction: row;
+  }
+  .form-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-header .logo {
+    flex-direction: row;
+  }
+  .form-header .logo h1 {
+    font-size: 1.2rem;
+  }
+  .form-header .timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form-header .timer-divider {
+    position: absolute;
+    margin-right: 80px;
+  }
+  .form-header .timer-box {
+    margin-right: 12px;
+    width: 30px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .input-group .header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .input-group .header .description h2 {
+    font-size: 1rem;
+  }
+  .input-group .header .description p {
+    font-size: 0.9rem;
+  }
+  .input-group .header .edit {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .input-group .main {
+    display: block;
+    align-items: center;
+    border: 1px solid #025efe;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .input-group .main input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+  }
+  .input-group .main .loading-icon,
+  .input-group .main .trailing-icon {
+    width: 40px;
+  }
+  .input-group .main .trailing-icon {
+    width: 26px;
+    margin-left: 10px;
+  }
+  .input-group span {
+    margin: 0 5px;
+  }
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .submit-btn #pay-btn {
     width: 100%;
     padding: 15px 0;
     background-color: #025efe;
